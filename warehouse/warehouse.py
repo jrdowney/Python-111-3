@@ -91,39 +91,15 @@ def total_stock_value():
     print("Total value: " + str(total))
 
 def list_of_categories():
-    print_header("List of categories")
-    print_header("Can't figure this one out!!!")
-    # for item in catalog:
-    
-    # duplicates = []
-    # for item in catalog:
-    #     if catalog.count(item) > 1:
-    #         if item not in duplicates:
-    #             duplicates.append(item)
-    # print(duplicates)
-
-
-
-        # seen = set()
-        # result = []
-        # for item in catalog:
-        #     if item.category not in seen:
-        #         seen.add(item.category)
-        #         result.append(item.category)
-                
-        #         print(result)
-
-
-
-    #     set_list = set(item.category)
-    # print(list(set_list))
-
-        # b = []
-
-        # for item in catalog:
-        #     if (item.category != b):
-        #         b.append(item.category)
-        # print(b)
+    result = []
+    num = 0
+    print_header("List of Catagories")
+    for item in catalog:
+        if item.category not in result:
+            result.append(item.category)
+    for item in result:
+        num += 1
+        print(" Category "+ str(num) + item.rjust(30)) 
 
 
 deserialize_catalog()
